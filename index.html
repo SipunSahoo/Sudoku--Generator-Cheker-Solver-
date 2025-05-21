@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+
+    <div class="sudoku-container">
+        <table id="sudoku-grid"></table>
+    </div>
+
+    <div class="buttons">
+        <button onclick="solveSudoku()">Solve</button>
+        <button onclick="checkSudoku()">Check</button>
+        <button onclick="resetGrid()">Reset</button>
+        <button onclick="generateSudoku()">Generate</button>
+    </div>
+
+    <p id="status"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

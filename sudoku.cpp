@@ -40,10 +40,10 @@ bool findEmptyCell(const vector<vector<int>>& grid, int& row, int& col) {
 
 //solve Sudoku using backtracking
 bool solveSudoku(vector<vector<int>>& grid) {
-    int row, col;
+    int row, col;//to be set by findemptycell funtion
     if (!findEmptyCell(grid, row, col)) return true;
 
-    for (int num = 1; num <= SIZE; ++num) {
+    for (int num = 1; num <= SIZE /*9*/; ++num) {
         if (isSafe(grid, row, col, num)) {
             grid[row][col] = num;
             if (solveSudoku(grid)) return true;

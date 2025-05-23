@@ -10,21 +10,7 @@ using namespace std;
 
 const int SIZE = 9;
 
-// Function to print the Sudoku grid
-void printGrid(const vector<vector<int>>& grid) {
-    for (int row = 0; row < SIZE; ++row) {
-        if (row % 3 == 0 && row != 0) {
-            cout << "---------------------" << endl;
-        }
-        for (int col = 0; col < SIZE; ++col) {
-            if (col % 3 == 0 && col != 0) {
-                cout << "| ";
-            }
-            cout << grid[row][col] << " ";
-        }
-        cout << endl;
-    }
-}
+
 
 //check if a number can be placed in a given cell
 bool isSafe(const vector<vector<int>>& grid, int row, int col, int num) {

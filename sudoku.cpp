@@ -62,7 +62,7 @@ bool generateFullSudoku(vector<vector<int>>& grid) {
     for (int i = 1; i <= SIZE; i++) numbers.push_back(i);
 
     //shuffle numbers randomly
-    random_device rd;
+    random_device rd; //seed
     mt19937 g(rd());
     shuffle(numbers.begin(), numbers.end(), g);
 

@@ -44,7 +44,8 @@ bool solveSudoku(vector<vector<int>>& grid) {
     if (!findEmptyCell(grid, row, col)) return true;
 
     for (int num = 1; num <= SIZE /*9*/; ++num) {
-        if (isSafe(grid, row, col, num)) {
+        if (isSafe(grid, row, col, num))
+         {
             grid[row][col] = num;
             if (solveSudoku(grid)) return true;
             grid[row][col] = 0;
@@ -152,15 +153,6 @@ string gridToJSON(const vector<vector<int>>& grid) {
     return ss.str();
 }
 
-// Function to manually enter Sudoku grid
-void enterSudokuGrid(vector<vector<int>>& grid) {
-    cout << "Enter the Sudoku grid (0 for empty cells):\n";
-    for (int i = 0; i < SIZE; ++i) {
-        for (int j = 0; j < SIZE; ++j) {
-            cin >> grid[i][j];
-        }
-    }
-}
 
 // Main function (Server will call functions, not use main here)
 int main() {

@@ -167,6 +167,15 @@ function generateSudoku() {
         return true;
     }
 
+    function showLevelPopup() {
+  document.getElementById('levelPopup').classList.remove('hidden');
+}
+function startGeneration() {
+  const level = document.querySelector('input[name="level"]:checked').value;
+  generateSudoku(level); // Call your existing function with the level
+  document.getElementById('levelPopup').classList.add('hidden');
+}
+
     function fillGrid(grid) {
         for (let row = 0; row < 9; row++) {
             for (let col = 0; col < 9; col++) {
